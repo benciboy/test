@@ -32,6 +32,7 @@ void Widget::nyomas()
    ui->addButton->setText("fos e");
 for (int i=0; i< 1 ;  i++)
    {
+    // egy uj komnet
  QPushButton *button = new QPushButton("D&ownload" , this);
  ui->gridLayout->addWidget(button);
 }
