@@ -4,11 +4,12 @@
 #include <math.h>
 
 Widget::Widget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Widget)
+        QWidget(parent),
+        ui(new Ui::Widget)
 {
     ui->setupUi(this);
     connect(ui->addButton, SIGNAL(clicked()), this, SLOT(nyomas()));
+ //   connect(ui->csuszka, SIGNAL(valueChanged(int)),this, SLOT(kombi()));
 }
 
 Widget::~Widget()
@@ -31,21 +32,32 @@ void Widget::changeEvent(QEvent *e)
 void Widget::nyomas()
 {
 
- //  ui->addButton->setText("fos e");
-   int  maxnumber = 90;
-for (int i=0; i< maxnumber ;  i++)
-   {
+    //  ui->addButton->setText("fos e");
+    int  maxnumber = 49;
+    for (int i=0; i< maxnumber ;  i++)
+    {
 
-    // normal button impl
-    QPushButton *button = new QPushButton(QString::number(i+1), this);
-    button->setCheckable(true);
-   // ui->gridLayout->addWidget(button, i/((int) sqrt(maxnumber)) ,i%(int)(sqrt(maxnumber)));
+        // normal button impl
+        QPushButton *button = new QPushButton(QString::number(i+1), this);
+        button->setCheckable(true);
+        button->setStyleSheet(QString("QPushButton:checked{background-color: lightskyblue;}"));
+        ui->gridLayout->addWidget(button, i/((int) sqrt(maxnumber)) ,i%(int)(sqrt(maxnumber)));
 
-    // radio button impl
-    QRadioButton *radioButton = new QRadioButton(QString::number(i+1));
-    radioButton->setAutoExclusive(false);
-    ui->gridLayout->addWidget(radioButton, i/((int) sqrt(maxnumber)) ,i%(int)(sqrt(maxnumber)));
+    }
 
 }
-  //  ui->gridLayout->addItem(button);
-}
+
+/*
+ * fos dolgok
+ */
+
+//QPushButton* button = new QPushButton(tr("Red Button"), this);
+//button->setCheckable(true);
+//button->setStyleSheet(QString("QPushButton:checked{background-color: lightskyblue;}"));
+//  ui->gridLayout->addWidget(button);
+// radio button impl
+//    QRadioButton *radiogomb = new QRadioButton(QString::number(i+1));
+//    radiogomb->setAutoExclusive(false);
+//    radiogomb->setAutoFillBackground(true);
+//    radiogomb->setLayoutDirection(Qt::RightToLeft);
+//    ui->gridLayout->addWidget(radiogomb, i/((int) sqrt(maxnumber)) ,i%(int)(sqrt(maxnumber)));
