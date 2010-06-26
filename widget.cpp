@@ -1,5 +1,7 @@
 #include "widget.h"
 #include "ui_widget.h"
+#include <stdio.h>
+#include <math.h>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -29,12 +31,21 @@ void Widget::changeEvent(QEvent *e)
 void Widget::nyomas()
 {
 
-   ui->addButton->setText("fos e");
-for (int i=0; i< 10 ;  i++)
+ //  ui->addButton->setText("fos e");
+   int  maxnumber = 90;
+for (int i=0; i< maxnumber ;  i++)
    {
-    // egy uj komnet
- QPushButton *button = new QPushButton("D&ownload" , this);
- ui->gridLayout->addWidget(button,i,i);
+
+    // normal button impl
+    QPushButton *button = new QPushButton(QString::number(i+1), this);
+    button->setCheckable(true);
+   // ui->gridLayout->addWidget(button, i/((int) sqrt(maxnumber)) ,i%(int)(sqrt(maxnumber)));
+
+    // radio button impl
+    QRadioButton *radioButton = new QRadioButton(QString::number(i+1));
+    radioButton->setAutoExclusive(false);
+    ui->gridLayout->addWidget(radioButton, i/((int) sqrt(maxnumber)) ,i%(int)(sqrt(maxnumber)));
+
 }
   //  ui->gridLayout->addItem(button);
 }
