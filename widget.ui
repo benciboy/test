@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>356</width>
-    <height>288</height>
+    <width>424</width>
+    <height>326</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>9</x>
-     <y>254</y>
+     <y>294</y>
      <width>75</width>
      <height>25</height>
     </rect>
@@ -26,10 +26,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>nyomd</string>
-   </property>
-   <property name="checkable">
-    <bool>true</bool>
+    <string>gombadd</string>
    </property>
    <property name="autoDefault">
     <bool>false</bool>
@@ -45,7 +42,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>220</y>
+     <y>260</y>
      <width>72</width>
      <height>21</height>
     </rect>
@@ -65,7 +62,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>168</y>
+     <y>210</y>
      <width>331</width>
      <height>16</height>
     </rect>
@@ -80,24 +77,24 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>9</x>
      <y>9</y>
-     <width>331</width>
-     <height>151</height>
+     <width>401</width>
+     <height>191</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout"/>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>190</y>
+     <y>230</y>
      <width>341</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -119,6 +116,19 @@
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="removeButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>290</y>
+     <width>83</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>gombleszed</string>
+   </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
